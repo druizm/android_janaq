@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.janaq.myapplication.ui.MainNavActivity" >
+
+    <group android:checkableBehavior="single" >
+
+        <item android:id="@+id/nav_item_uno"
+            android:title="Principal"
+            android:icon="@drawable/ic_folder_permit" />
+
+        <item android:id="@+id/nav_item_dos"
+            android:title="Principal"
+            android:icon="@drawable/ic_folder_permit" />
+
+        <item android:id="@+id/nav_item_tres"
+            android:title="Principal"
+            android:icon="@drawable/ic_folder_permit" />
+
+
+    </group>
+
+</menu>
