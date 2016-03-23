@@ -81,7 +81,7 @@ public class LocalData {
             Cursor c = db.query("productos", productos_columnas, null, null, null, null, null);
 
             if( c.moveToFirst() ){
-                db.delete("producto", null, null);
+                db.delete("productos", null, null);
             }
 
             JSONArray jarray;

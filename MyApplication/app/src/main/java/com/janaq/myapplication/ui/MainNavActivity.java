@@ -33,7 +33,6 @@ public class MainNavActivity extends AppCompatActivity implements NavigationView
         initParams();
         setParams();
 
-
     }
 
     private void initParams(){

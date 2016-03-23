@@ -100,8 +100,13 @@ public class RegistroActivity extends AppCompatActivity {
             edit.putString(AppMyApp.PREF_USER_PASSWORD, _pass);
             edit.apply();
 
-            Intent in = new Intent(this, HomeActivity.class);
+            if(MainActivity.LoginActivity != null) MainActivity.LoginActivity.finish();
+
+            Intent in = new Intent(this, MainNavActivity.class);
+            in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(in);
+
+            finish();
 
         }
     }

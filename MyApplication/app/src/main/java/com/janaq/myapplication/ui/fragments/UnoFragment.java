@@ -2,12 +2,15 @@ package com.janaq.myapplication.ui.fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.janaq.myapplication.R;
@@ -20,6 +23,8 @@ public class UnoFragment extends Fragment implements View.OnClickListener{
 
     private TextView txtTitulo;
     private Button btnListar;
+
+    private RelativeLayout pantalla;
 
     public UnoFragment(){
     }
@@ -40,12 +45,15 @@ public class UnoFragment extends Fragment implements View.OnClickListener{
 
     private void initParams(View v){
 
+        pantalla = (RelativeLayout) v.findViewById(R.id.pantalla);
+
         txtTitulo = (TextView) v.findViewById(R.id.textView);
         btnListar = (Button) v.findViewById(R.id.btnListar);
 
     }
 
     public  void setParams(){
+        txtTitulo.setOnClickListener(this);
         btnListar.setOnClickListener(this);
     }
 
@@ -54,6 +62,10 @@ public class UnoFragment extends Fragment implements View.OnClickListener{
         switch (v.getId()){
             case R.id.btnListar:
                 listar();
+                break;
+            case R.id.textView:
+                //pantalla.setBackgroundColor(Color.RED);
+                pantalla.setBackgroundColor(ContextCompat.getColor(mContext,R.color.colorPantalla));
                 break;
 
         }

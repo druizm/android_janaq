@@ -16,6 +16,8 @@ import com.janaq.myapplication.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+
+    public static  AppCompatActivity LoginActivity;
     private Context mContext;
     private SharedPreferences mPref;
 
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        LoginActivity = this;
         mContext = this;
         mPref = getSharedPreferences(AppMyApp.PREF_FILE, Context.MODE_PRIVATE);
 
@@ -85,10 +88,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if(_correo.equals(pref_user) && _pass.equals(pref_pass)){
 
-                Intent in = new Intent(this, HomeActivity.class);
+                Intent in = new Intent(this, MainNavActivity.class);
                 startActivity(in);
+                finish();
 
             }else{
+                edtUser.setText("");
+                edtPassword.setText("");
+
                 Toast.makeText(getBaseContext(), "Usuario y/o contraseña incorrectas.",
                         Toast.LENGTH_LONG).show();
             }

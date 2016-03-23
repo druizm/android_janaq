@@ -20,7 +20,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/colorMenuLateral"
-        app:menu="@menu/menu_nav" >
+        app:menu="@menu/menu_nav"
+        app:headerLayout="@layout/nav_header">
 
 
     </android.support.design.widget.NavigationView>
