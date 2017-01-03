@@ -21,8 +21,8 @@ public class AppMyApp extends Application {
 
     /** CREDENCIALES **/
 
-    public static final String CREDENTIAL_USERNAME = "admin_api@quickdrink.com";
-    public static final String CREDENTIAL_PASS = "QDrink!_._15!";
+    public static final String CREDENTIAL_USERNAME = "admin00@clase.com";
+    public static final String CREDENTIAL_PASS = "test00";
 
     /** VARIABLES PREFERENCIAS **/
 
